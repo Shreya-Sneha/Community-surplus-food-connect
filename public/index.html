@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Surplus Food Connect</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>🍲 Surplus Food Connect</h1>
+    <p>Bridging local food surplus from donors to shelters and community kitchens.</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Post Surplus Food</h2>
+      <form id="donation-form">
+        <div class="form-group">
+          <label for="food_name">Food Item Description *</label>
+          <input type="text" id="food_name" placeholder="e.g., 25 Packs of Fresh Biryani" required>
+        </div>
+        <div class="form-group">
+          <label for="donor_name">Donor / Restaurant Name *</label>
+          <input type="text" id="donor_name" placeholder="e.g., City Center Diner" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="category">Category</label>
+            <select id="category">
+              <option value="Cooked Meals">Cooked Meals</option>
+              <option value="Bakery & Bread">Bakery & Bread</option>
+              <option value="Packaged Groceries">Packaged Groceries</option>
+              <option value="Fresh Produce">Fresh Produce</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="quantity">Quantity *</label>
+            <input type="text" id="quantity" placeholder="e.g., 25 Servings / 10 kg" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="pickup_address">Pickup Address *</label>
+            <input type="text" id="pickup_address" placeholder="e.g., Flat 4B, Sector 5" required>
+          </div>
+          <div class="form-group">
+            <label for="expires_in_hours">Expires In (Hours) *</label>
+            <input type="number" id="expires_in_hours" min="1" max="72" value="4" required>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Publish Listing</button>
+      </form>
+    </section>
+
+    <section class="feed-section">
+      <div class="feed-header">
+        <h2>Available Food Donations</h2>
+        <button id="refresh-btn" class="btn btn-secondary">↻ Refresh</button>
+      </div>
+      <div id="listings-grid" class="grid"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
