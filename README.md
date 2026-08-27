@@ -17,6 +17,8 @@
 ## 💻 Getting Started Locally
 
 1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/Shreya-Sneha/community-surplus-food-connect.git](https://github.com/Shreya-Sneha/community-surplus-food-connect.git)
-   cd community-surplus-food-connect
+ ```bash
+git clone https://github.com/Shreya-Sneha/community-surplus-food-connect.git
+cd community-surplus-food-connect
+```
+ 
